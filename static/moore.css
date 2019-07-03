@@ -39,6 +39,8 @@ section#home{
 
 footer{
   border-top: double firebrick;
+  clear: both;
+  margin-top: 14em;
 }
 
 footer p{
@@ -98,27 +100,28 @@ section#signature p.bold{
   margin-left: 1em;
 }
 
-section#signature input{
-  margin-top: 2em;
-  margin-left: 2em;
-}
-
-section#signature label{
-  margin-left: 2em;
-  font-style: italic;
-}
-
 section#signature div{
   margin-top: 10em;
 }
 
-.signature{
-  border: 0;
-  border-bottom: 1px solid black;
-  display: block;
-  width: 60%;
+section#signature label{
+  clear: both;
+  float: left;
+  font-style: italic;
+  margin-left: 2em;
+  padding-right: 1em;
+  padding-top: 6px;
 }
 
+section#signature input{
+  border: none;
+  border-bottom: 1px solid black;
+  clear: both;
+  float: left;
+  margin-left: 2em;
+  margin-top: 2em;
+  width:60%;
+}
 p.disclaimer{
   color: #D8000C;
   font-style: italic;
