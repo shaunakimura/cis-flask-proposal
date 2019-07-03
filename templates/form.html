@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>{{title}}</title>
+
+        <link rel="stylesheet" type="text/css" href="../static/form.css">
+
+    </head>
+    <body id="home">
+
+        <form action="/forward/" method="post">
+
+            <h2 id="title">Form</h2>
+
+            <fieldset>
+                <label for="estimateLink" class="textLabel">Copy and paste the link of an estimate in Service Fusion in the box below.</label><br>
+                <input type="text" name="estimateLink">
+            </fieldset>
+
+            <fieldset>
+              <legend>Company</legend>
+                <input type="radio" name="company" id="phd" value="phd">
+                <label for="phd">PHD Communications</label>
+
+                <input type="radio" name="company" id="moore" value="moore">
+                <label for="moore">Moore Enterprises</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Business Challenges</legend>
+
+                <input type = "checkbox" name = "challenge" id="challenge1" value="Challenge 1">
+                <label for="challenge1">Challenge 1</label><br>
+
+                <input type = "checkbox" name = "challenge" id="challenge2" value="Challenge 2">
+                <label for="challenge2">Challenge 2</label><br>
+
+                <input type = "checkbox" name = "challenge" id="challenge3" value="Challenge 3">
+                <label for="challenge3">Challenge 3</label><br>
+
+                <input type = "checkbox" name = "challenge" id="challenge4" value="Challenge 4">
+                <label for="challenge4">Challenge 4</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Project Goals</legend>
+                <input type = "checkbox" name = "goal" id="goal1" value="Goal 1">
+                <label for="goal1">Goal 1</label><br>
+
+                <input type = "checkbox" name = "goal" id="goal2" value="Goal 2">
+                <label for="goal2">Goal 2</label><br>
+
+                <input type = "checkbox" name = "goal" id="goal3" value="Goal 3">
+                <label for="goal3">Goal 3</label><br>
+
+                <input type = "checkbox" name = "goal" id="goal4" value="Goal 4">
+                <label for="goal4">Goal 4</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Project Benefits</legend>
+
+                <input type = "checkbox" name = "benefit" id="benefit1" value="Benefit 1">
+                <label for="benefit1">Benefit 1</label><br>
+
+                <input type = "checkbox" name = "benefit" id="benefit2" value="Benefit 2">
+                <label for="benefit2">Benefit 2</label><br>
+
+                <input type = "checkbox" name = "benefit" id="benefit3" value="Benefit 3">
+                <label for="benefit3">Benefit 3</label><br>
+
+                <input type = "checkbox" name = "benefit" id="benefit4" value="Benefit 4">
+                <label for="benefit4">Benefit 4</label><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Voice and Data Carrier Services</legend>
+                <input type = "checkbox" name = "vendor" id="nhc" value="New Horizons Communications">
+                <label for="nhc">New Horizons Communications</label><br>
+
+                <input type = "checkbox" name = "vendor" id="whitemtn" value="White Mountain IT Services">
+                <label for="whitemtn">White Mountain IT Services</label><br>
+
+                <input type = "checkbox" name = "vendor" id="verizon" value="Verizon Fiber Services">
+                <label for="verizon">Verizon Fiber Services</label><br>
+
+                <input type = "checkbox" name = "vendor" id="comcast" value="Comcast Business Services">
+                <label for="comcast">Comcast Business Services</label><br>
+            </fieldset>
+
+            <fieldset class="submit">
+                <button id="generate" type="submit">Create Proposal</button>
+            </fieldset>
+        </form>
+
+
+
+        <footer>HTML & CSS by Shauna Kimura</footer>
+
+
+
+    </body>
+</html>

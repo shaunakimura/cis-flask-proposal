@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Jun 27, 2019, 9:32:21 AM
+    Author     : shaunakimura
+*/
+
+body{
+    background-color: #0074D9;
+    font-family: "Helvetica Neue";
+    margin: auto;
+}
+
+
+#title{
+    color: #33363b;
+    text-align: center;
+}
+
+.textLabel{
+    font-weight: bold;
+}
+
+form{
+    background: white;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    color: #33363b;
+    font-size: 12pt;
+    margin: auto;
+    margin-bottom: 4em;
+    margin-top: 4em;
+    padding: 1em;
+    width: 70%;
+}
+
+fieldset{
+    border: none;
+    margin-bottom: 1em;
+}
+
+fieldset.submit{
+    text-align: center;
+}
+
+legend{
+    font-weight: bold;
+}
+
+input[type='text']{
+    font-size: 10pt;
+    margin-top: .5em;
+    width: 100%;
+}
+
+input[type='checkbox']{
+    margin-bottom: .5em;
+}
+
+button{
+    background: white;
+    border: 2px solid #0074D9;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    color: #0074D9;
+    font-size: 12pt;
+    padding: .5em;
+    text-align: center;
+    width: 60%;
+}
+
+button:hover{
+    background-color: #0074D9;
+    color: white;
+    cursor: grab;
+}
+
+footer{
+    background-color: white;
+    color: #33363b;
+    margin-top: 2em;
+    padding: 1em;
+    text-align: center;
+    width: 100%;
+}

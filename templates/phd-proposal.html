@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>PHD Communications Proposal</title>
+
+        <link rel="stylesheet" type="text/css" href='../static/phd.css'>
+        <link rel="stylesheet" media="print" type="text/css" href="../static/print.css">
+
+    </head>
+    <body id="home">
+
+      <header>
+        <h3>{{date}}<br>{{customer}}</h3>
+      </header>
+
+      <section id="first-page">
+          <img id="logo" src='../static/phd-logo.png' alt="Company Logo">
+          <h2>Proposal of Services<br>for<br><span class="uppercase">{{customer}}</span><br>{{date}}</h2>
+          <h2 id="owner">Prepared By:<br>{{owner}}</h2>
+      </section>
+
+      <section id="overview">
+        <h2>Overview</h2>
+        <p>PHD Communications is pleased to submit this proposal for services to support you in achieving your communication technology goals. We have partnered with dozens of small businesses throughout the Northeast--business committed to improving the customer experience through technology and will strive to always be a trusted partner in your business.
+      </section>
+
+      <section id="challenges">
+        <h3>Business Challenges</h3>
+        <ul>
+          {% for item in challenges %}
+          <li> {{ item }} </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section id="goals">
+        <h3>Project Goals</h3>
+        <ul>
+          {% for item in goals %}
+          <li> {{ item }} </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section id="benefits">
+        <h3>Project Benefits</h3>
+        <ul>
+          {% for item in benefits %}
+          <li> {{ item }} </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section id="about">
+          <h2>About PHD Communications</h2>
+
+          <div class="images">
+            <img src="../static/nashua.jpg" alt="Nashua, NH">
+
+            <img src="../static/church.jpeg" alt="Nashua Church">
+          </div>
+
+          <p>PHD has been installing and servicing business telephone systems in the Greater Boston and Northern New England markets since 1990 and is proudly named after it's three founders, Pat Dunn, Hugh Pringle and Dick Hamel.</p>
+
+          <p>We serve as the trusted, single source for our clients voice and data communications needs.  From basic digital business phone systems, to the latest VOIP, cloud and Internet services, PHD can keep you in touch with your clients, and keep things running smoothly.</p>
+
+          <p class="bold">Service Area</p>
+
+          <p>We serve businesses based in New England, including support for their branch locations and remote users throughout the world.  Emergency onsite service is available throughout New Hampshire, from Concord south through Manchester NH, and then down into Boston. From Northern and Central Mass we cover from Worcester, east to the North Shore, including the Salem and Portsmouth NH area.</p>
+
+          <p class="bold">Charitable Giving</p>
+
+          <p>At PHD, we are committed to being responsible, responsive and respected citizens in the communities in which we work and live.  When we work with a corporate client to replace or upgrade their communications system, we are often able to offer the older equipment to local non profits at a greatly reduced cost.  Our goal is to provide for those in need and assist those who are working to better their communities.</p>
+        </section>
+
+        <section id="vendor-selection">
+          <h2>Vendor Selection</h2>
+          <p>PHD Communications has done a basic assessment of services and requirements based on the information and billing provided by the client. Based on this assessment we have selected the following service providers and system manufacturers to be a part of this solution:</P>
+        </section>
+
+        <section id="carrier-services">
+          <h3>Voice and Data Carrier Services</h3>
+          {% for key, value in vendors.items() %}
+          <p class="bold"> {{ key }} </p>
+          <ul>
+            {% for item in value %}
+            <li> {{ item }} </li>
+            {% endfor %}
+          </ul>
+          {% endfor %}
+        </section>
+
+        <section id="estimated-charges">
+          <h2>Proposed Services</h2>
+          <table>
+            <tr>
+              <th>Description</th>
+              <th>Qty</th>
+              <th>Rate</th>
+              <th>Total</th>
+            </tr>
+            {% for key, value in data.items() %}
+              <tr>
+                <td>{{key}}</td>
+                {% for item in value %}
+                  <td> {{ item }} </td>
+                {% endfor %}
+              </tr>
+            {% endfor %}
+            <tr>
+              <td class="bold">Total NRC</td>
+              <td></td>
+              <td></td>
+              <td class="bold">{{total}}</td>
+            </tr>
+          </table>
+
+          <p class="disclaimer">Sales tax, carrier taxes and fees are not included in this proposal.</p>
+        </section>
+
+        <footer>
+            <p class="bottom-left">PHD Communications</p>
+
+            <p class="bottom-right">33 Main Street<br>Nashua NH 03064<br>(603)889-5925</p>
+        </footer>
+
+
+
+
+    </body>
+</html>
