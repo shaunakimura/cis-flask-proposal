@@ -14,16 +14,6 @@ body{
     margin: auto;
 }
 
-
-#title{
-    color: #33363b;
-    text-align: center;
-}
-
-.textLabel{
-    font-weight: bold;
-}
-
 form{
     background: white;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
@@ -39,10 +29,6 @@ form{
 fieldset{
     border: none;
     margin-bottom: 1em;
-}
-
-fieldset.submit{
-    text-align: center;
 }
 
 legend{
@@ -83,4 +69,19 @@ footer{
     padding: 1em;
     text-align: center;
     width: 100%;
+}
+
+/* custom */
+
+#title{
+    color: #33363b;
+    text-align: center;
+}
+
+.textLabel{
+    font-weight: bold;
+}
+
+fieldset.submit{
+    text-align: center;
 }

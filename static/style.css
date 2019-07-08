@@ -1,0 +1,121 @@
+/* CSS by Shauna Kimura */
+
+body {
+  font: 12pt Georgia, "Times New Roman", Times, serif;
+  line-height: 1.3;
+}
+
+header{
+  text-transform: uppercase;
+  width: 100%;
+}
+
+footer{
+  clear: both;
+  display: block;
+  font-style: italic;
+  margin-top: 14em;
+}
+
+footer p.bottom-right{
+  float: right;
+}
+
+footer p.bottom-left{
+  float: left;
+}
+
+h2 {
+  font-size: 14pt;
+}
+
+h3{
+  font-size: 12pt;
+}
+
+p{
+  color: black;
+  margin-left: .5cm;
+}
+
+li{
+  padding-bottom: 6px;
+}
+
+table{
+  font-family: "Arial";
+  margin-top: 1em;
+  text-align: left;
+  width: 100%;
+}
+
+table th{
+  color: white;
+  padding: 6px;
+}
+
+table, td {
+  border-collapse: collapse;
+  padding: 6px;
+}
+
+tr:nth-child(even){
+  background-color: gainsboro;
+}
+
+/* custom */
+
+p.disclaimer{
+  color: #D8000C;
+  font-style: italic;
+  margin-left: 0;
+}
+
+span.uppercase{
+  text-transform: uppercase;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+section#home{
+  text-align: center;
+}
+
+section#vendor-selection{
+  clear: both;
+  padding-top: 1em;
+}
+
+section#signature div{
+  margin-top: 10em;
+}
+
+section#signature label{
+  clear: both;
+  float: left;
+  font-style: italic;
+  margin-left: 2em;
+  padding-right: 1em;
+  padding-top: 6px;
+}
+
+section#signature input{
+  border: none;
+  border-bottom: 1px solid black;
+  clear: both;
+  float: left;
+  margin-left: 2em;
+  margin-top: 2em;
+  width:60%;
+}
+
+div.new-page{
+  margin-bottom: 6em;
+}
+
+img#logo{
+  margin-top: 2em;
+  width: 600px;
+}
