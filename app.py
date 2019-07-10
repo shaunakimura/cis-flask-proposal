@@ -1,3 +1,7 @@
+# Shauna Kimura
+# CIS
+# July 2019
+
 from flask import Flask, request, render_template
 import requests
 from bs4 import BeautifulSoup
@@ -5,12 +9,13 @@ import unicodedata
 
 app = Flask(__name__)
 
+# Opens form
 @app.route('/', methods=["GET"])
 def home():
     return render_template("form.html")
 
 @app.route('/forward/', methods=["POST"])
-def build():
+def template():
     LOGIN_URL = 'https://admin.servicefusion.com/'
     estimate_link = request.form['estimateLink']
 
