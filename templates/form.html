@@ -1,110 +1,162 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
-    <head>
-        <meta charset="UTF-8">
 
-        <title>{{title}}</title>
+<head>
+  <meta charset="UTF-8">
 
-        <link rel="stylesheet" type="text/css" href="../static/form.css">
+  <title>Proposal Form</title>
 
-    </head>
-    <body id="home">
+  <link rel="stylesheet" type="text/css" href="../static/form.css">
 
-        <form action="/forward/" method="post">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
 
-            <h2 id="title">Proposal Generator Form</h2>
+<body>
 
-            <fieldset>
-                <label for="estimateLink" class="textLabel">Copy and paste the link of an estimate in Service Fusion in the box below.</label><br>
-                <input type="text" name="estimateLink">
-            </fieldset>
+  <form id="form" action="/forward/" method="post">
+    <fieldset>
+      <label for="link">Estimate Link</label>
+      <input type="url" id="link" name="link" placeholder="Copy and paste the link of an estimate in Service Fusion.">
+    </fieldset>
 
-            <fieldset>
-              <legend>Company</legend>
-                <input type="radio" name="company" id="phd" value="phd">
-                <label for="phd">PHD Communications</label>
+    <fieldset>
+      <label for="company">Company</label>
+      <select id="company" name="company">
+        <option value="" disabled selected="selected">Select an Option</option>
+        <option value="phd">PHD Communications</option>
+        <option value="moore">Moore Enterprises</option>
+      </select>
+    </fieldset>
 
-                <input type="radio" name="company" id="moore" value="moore">
-                <label for="moore">Moore Enterprises</label>
-            </fieldset>
+    <fieldset>
+      <label>Business Challenges</label>
+      <input type="button" value="Add Challenge" class="add" id="addChallenge">
+      <table id="challenges">
+        <tbody>
+          <td><input type="text" name="challenge" placeholder="What are the challenges of this project?"></td>
+          <td><input type="button" value="Delete" class="delete"></td>
+        </tbody>
+      </table>
+    </fieldset>
 
-            <fieldset>
-                <legend>Business Challenges</legend>
+    <fieldset>
+      <label>Project Goals</label>
+      <input type="button" value="Add Goal" class="add" id="addGoal">
+      <table id="goals">
+        <tbody>
+          <td><input type="text" name="goal" placeholder="What are the goals of this project?"></td>
+          <td><input type="button" value="Delete" class="delete"></td>
+        </tbody>
+      </table>
+    </fieldset>
 
-                <input type = "checkbox" name = "challenge" id="challenge1" value="Challenge 1">
-                <label for="challenge1">Challenge 1</label><br>
+    <fieldset>
+      <label>Project Benefits</label>
+      <input type="button" value="Add Benefit" class="add" id="addBenefit">
+      <table id="benefits">
+        <tbody>
+          <td><input type="text" name="benefit" placeholder="What are the benefits of this project?"></td>
+          <td><input type="button" value="Delete" class="delete"></td>
+        </tbody>
+      </table>
+    </fieldset>
 
-                <input type = "checkbox" name = "challenge" id="challenge2" value="Challenge 2">
-                <label for="challenge2">Challenge 2</label><br>
+    <fieldset>
+      <label>Current Service Products and Costs</label>
+      <input type="button" value="Add Service" class="add" id="addRow">
+      <table id="current">
+        <thead>
+          <tr>
+            <th>Quantity</th>
+            <th>Description</th>
+            <th>Each</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="number" name="qty" class="qty"></td>
+            <td><input type="text" name="service" class="service"></td>
+            <td><input type="text" name="price" value="$" class="price"></td>
+            <td><input type="text" name="subtot" value="$" class="subtot"></td>
+            <td><input type="button" value="Delete" class="delete"></td>
+          </tr>
+        </tbody>
+      </table>
+    </fieldset>
 
-                <input type = "checkbox" name = "challenge" id="challenge3" value="Challenge 3">
-                <label for="challenge3">Challenge 3</label><br>
+    <fieldset>
+      <label>Voice and Data Carrier Services</label><br>
 
-                <input type = "checkbox" name = "challenge" id="challenge4" value="Challenge 4">
-                <label for="challenge4">Challenge 4</label><br>
-            </fieldset>
+      <input type="checkbox" name="vendor" id="nhc" value="New Horizons Communications">
+      <label for="nhc">New Horizons Communications</label><br>
 
-            <fieldset>
-                <legend>Project Goals</legend>
-                <input type = "checkbox" name = "goal" id="goal1" value="Goal 1">
-                <label for="goal1">Goal 1</label><br>
+      <input type="checkbox" name="vendor" id="whitemtn" value="White Mountain IT Services">
+      <label for="whitemtn">White Mountain IT Services</label><br>
 
-                <input type = "checkbox" name = "goal" id="goal2" value="Goal 2">
-                <label for="goal2">Goal 2</label><br>
+      <input type="checkbox" name="vendor" id="verizon" value="Verizon Fiber Services">
+      <label for="verizon">Verizon Fiber Services</label><br>
 
-                <input type = "checkbox" name = "goal" id="goal3" value="Goal 3">
-                <label for="goal3">Goal 3</label><br>
+      <input type="checkbox" name="vendor" id="comcast" value="Comcast Business Services">
+      <label for="comcast">Comcast Business Services</label><br>
+    </fieldset>
 
-                <input type = "checkbox" name = "goal" id="goal4" value="Goal 4">
-                <label for="goal4">Goal 4</label><br>
-            </fieldset>
+    <fieldset>
+      <input type="submit" value="Create Proposal">
+    </fieldset>
 
-            <fieldset>
-                <legend>Project Benefits</legend>
+  </form>
 
-                <input type = "checkbox" name = "benefit" id="benefit1" value="Benefit 1">
-                <label for="benefit1">Benefit 1</label><br>
+  <footer>HTML & CSS by Shauna Kimura</footer>
 
-                <input type = "checkbox" name = "benefit" id="benefit2" value="Benefit 2">
-                <label for="benefit2">Benefit 2</label><br>
+  <script>
+    $('#current').on('click', 'input[type="button"]', function() {
+      $(this).closest('tr').remove();
 
-                <input type = "checkbox" name = "benefit" id="benefit3" value="Benefit 3">
-                <label for="benefit3">Benefit 3</label><br>
+    })
+    $('input#addRow').click(function() {
+      $('#current tbody').append(
+        '<tr><td><input type="number" name="qty" class="qty"></td><td><input type="text" name="service" class="service"></td><td><input type="text" name="price" class="price" value="$"></td><td><input type="text" name="subtot" class="subtot" value="$"></td><td><input type="button" value="Delete" class="delete"></td></tr>'
+      )
 
-                <input type = "checkbox" name = "benefit" id="benefit4" value="Benefit 4">
-                <label for="benefit4">Benefit 4</label><br>
-            </fieldset>
+    });
 
-            <fieldset>
-                <legend>Voice and Data Carrier Services</legend>
-                <input type = "checkbox" name = "vendor" id="nhc" value="New Horizons Communications">
-                <label for="nhc">New Horizons Communications</label><br>
+    $('#challenges').on('click', 'input[type="button"]', function() {
+      $(this).closest('tr').remove();
 
-                <input type = "checkbox" name = "vendor" id="whitemtn" value="White Mountain IT Services">
-                <label for="whitemtn">White Mountain IT Services</label><br>
+    })
+    $('input#addChallenge').click(function() {
+      $('#challenges tbody').append(
+        '<tr><td><input type="text" name="challenge"></td><td><input type="button" value="Delete" class="delete"></td></tr>'
+      )
 
-                <input type = "checkbox" name = "vendor" id="verizon" value="Verizon Fiber Services">
-                <label for="verizon">Verizon Fiber Services</label><br>
+    });
 
-                <input type = "checkbox" name = "vendor" id="comcast" value="Comcast Business Services">
-                <label for="comcast">Comcast Business Services</label><br>
-            </fieldset>
+    $('#goals').on('click', 'input[type="button"]', function() {
+      $(this).closest('tr').remove();
 
-            <fieldset class="submit">
-                <button id="generate" type="submit">Create Proposal</button>
-            </fieldset>
-        </form>
+    })
+    $('input#addGoal').click(function() {
+      $('#goals tbody').append(
+        '<tr><td><input type="text" name="goal"></td><td><input type="button" value="Delete" class="delete"></td></tr>'
+      )
+
+    });
+
+    $('#benefits').on('click', 'input[type="button"]', function() {
+      $(this).closest('tr').remove();
+
+    })
+    $('input#addBenefit').click(function() {
+      $('#benefits tbody').append(
+        '<tr><td><input type="text" name="benefit"></td><td><input type="button" value="Delete" class="delete"></td></tr>'
+      )
+
+    });
+
+    $
+  </script>
+</body>
 
 
-
-        <footer>HTML & CSS by Shauna Kimura</footer>
-
-
-
-    </body>
 </html>

@@ -17,7 +17,7 @@ def home():
 @app.route('/forward/', methods=["POST"])
 def template():
     LOGIN_URL = 'https://admin.servicefusion.com/'
-    estimate_link = request.form['estimateLink']
+    estimate_link = request.form['link']
 
     if request.form['company'] == 'phd':
         company = 'phd'
@@ -105,6 +105,13 @@ def template():
     if comcast in vendors:
         vendor_dict[comcast] = comcast_list
 
+    # Current bill
+    services = request.form.getlist('service')
+    service_qty = request.form.getlist('qty')
+    unit = request.form.getlist('price')
+    sub = request.form.getlist('subtot')
+
+    current = dict((z[0], list(z[1:])) for z in zip(service_qty, services, unit, sub))
 
     # Collect data table
 
@@ -166,7 +173,7 @@ def template():
 
 
     if request.form['company'] == 'phd':
-        return render_template('phd-proposal.html', customer=customer, date=date, owner=opp_owner, challenges=challenges, goals=goals, benefits=benefits, vendors=vendor_dict, data=table_data, total=estimate_total)
+        return render_template('phd-proposal.html', customer=customer, date=date, owner=opp_owner, challenges=challenges, goals=goals, benefits=benefits, vendors=vendor_dict, data=table_data, total=estimate_total, current=current)
 
     elif request.form['company'] == 'moore':
-        return render_template('moore-proposal.html', customer=customer, date=date, owner=opp_owner, challenges=challenges, goals=goals, benefits=benefits, vendors=vendor_dict, data=table_data, total=estimate_total)
+        return render_template('moore-proposal.html', customer=customer, date=date, owner=opp_owner, challenges=challenges, goals=goals, benefits=benefits, vendors=vendor_dict, data=table_data, total=estimate_total, current=current)

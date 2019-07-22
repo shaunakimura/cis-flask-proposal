@@ -5,202 +5,239 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 <html>
-    <head>
-        <meta charset="UTF-8">
 
-        <title>Moore Enterprises Proposal</title>
+<head>
+  <meta charset="UTF-8">
 
-        <link rel="stylesheet" media="screen" type="text/css" href="../static/style.css">
-        <link rel="stylesheet" media="screen" type="text/css" href="../static/moore.css">
-    </head>
-    <body>
+  <title>Moore Enterprises Proposal</title>
 
-      <header>
-        <h3>{{date}}<br>{{customer}}</h3>
-      </header>
+  <link rel="stylesheet" media="screen" type="text/css" href="../static/style.css">
+  <link rel="stylesheet" media="screen" type="text/css" href="../static/moore.css">
+</head>
 
-      <div class="new-page">
-        <section id="home">
-            <img id="logo" src="../static/moore-logo.jpg" alt="Company Logo">
-            <h2>Proposal of Services<br>for<br><span class="uppercase">{{customer}}</span><br>{{date}}</h2>
-            <h2 id="owner">Prepared By:<br>{{owner}}</h2>
-        </section>
-      </div>
+<body>
 
-      <div class="new-page">
-        <section id="overview">
-          <h2>Overview</h2>
-          <p>Moore Enterprises is pleased to submit this proposal for services to support you in achieving your communication technology goals. We have partnered with dozens of small businesses throughout the Northeast--business committed to improving the customer experience through technology and will strive to always be a trusted partner in your business.
-          </section>
+  <header>
+    <h3>{{date}}<br>{{customer}}</h3>
+  </header>
+
+  <div class="new-page">
+    <section id="home">
+      <img id="logo" src="../static/moore-logo.jpg" alt="Company Logo">
+      <h2>Proposal of Services<br>for<br><span class="uppercase">{{customer}}</span><br>{{date}}</h2>
+      <h2 id="owner">Prepared By:<br>{{owner}}</h2>
+    </section>
+  </div>
+
+  <div class="new-page">
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>Moore Enterprises is pleased to submit this proposal for services to support you in achieving your communication technology goals. We have partnered with dozens of small businesses throughout the Northeast--business committed to improving
+        the customer experience through technology and will strive to always be a trusted partner in your business.
+    </section>
 
 
-        <section id="challenges">
-          <h3>Business Challenges</h3>
-          <ul>
-            {% for item in challenges %}
-            <li> {{ item }} </li>
-            {% endfor %}
-          </ul>
-        </section>
+    <section id="challenges">
+      <h3>Business Challenges</h3>
+      <ul>
+        {% for item in challenges %}
+        <li> {{ item }} </li>
+        {% endfor %}
+      </ul>
+    </section>
 
-        <section id="goals">
-          <h3>Project Goals</h3>
-          <ul>
-            {% for item in goals %}
-            <li> {{ item }} </li>
-            {% endfor %}
-          </ul>
-        </section>
+    <section id="goals">
+      <h3>Project Goals</h3>
+      <ul>
+        {% for item in goals %}
+        <li> {{ item }} </li>
+        {% endfor %}
+      </ul>
+    </section>
 
-        <section id="benefits">
-          <h3>Project Benefits</h3>
-          <ul>
-            {% for item in benefits %}
-            <li> {{ item }} </li>
-            {% endfor %}
-          </ul>
-        </section>
+    <section id="benefits">
+      <h3>Project Benefits</h3>
+      <ul>
+        {% for item in benefits %}
+        <li> {{ item }} </li>
+        {% endfor %}
+      </ul>
+    </section>
 
-      </div>
+  </div>
 
-      <div class="new-page">
-        <section id="about">
-          <h2>About Moore Enterprises</h2>
+  <div class="new-page">
+    <section id="about">
+      <h2>About Moore Enterprises</h2>
 
-          <p class="bold">Small to Midsized Business Telecommunications Experts for Central New England</p>
+      <p class="bold">Small to Midsized Business Telecommunications Experts for Central New England</p>
 
-          <p>Small to midsized business telephone systems are what we're all about. For over 20 years, we've been installing and servicing a wide range of business telephone systems designed specifically to handle the needs of small businesses just like yours throughout Central New England.</p>
+      <p>Small to midsized business telephone systems are what we're all about. For over 20 years, we've been installing and servicing a wide range of business telephone systems designed specifically to handle the needs of small businesses just like
+        yours throughout Central New England.</p>
 
-          <p class="bold">Small to midsized business experience and expertise.</p>
+      <p class="bold">Small to midsized business experience and expertise.</p>
 
-          <p>As small to midsized business telecommunications experts, we bring a lot to the table. Unlike the big, impersonal telephone companies, we work hard to develop a close relationship with our customers. We get to know their businesses so we can help them make informed, effective, cost-efficient decisions about their telecommunications systems and service. </p>
+      <p>As small to midsized business telecommunications experts, we bring a lot to the table. Unlike the big, impersonal telephone companies, we work hard to develop a close relationship with our customers. We get to know their businesses so we can
+        help them make informed, effective, cost-efficient decisions about their telecommunications systems and service. </p>
 
-          <p class="bold">Small to midsized businesses can have big needs.</p>
+      <p class="bold">Small to midsized businesses can have big needs.</p>
 
-          <p>We know that a small to midsized business needs to make every penny count. But just because you run a small business doesn't mean you don't have big needs. In fact, small businesses often demand the most from their telephone systems. </p>
+      <p>We know that a small to midsized business needs to make every penny count. But just because you run a small business doesn't mean you don't have big needs. In fact, small businesses often demand the most from their telephone systems. </p>
 
-          <p>As a small to midsized business owner, you need to do more with less. The equipment you use to run your business needs to be flexible, adaptable, cost-efficient, and long-lasting -- you don't have the luxury of being able to buy the newest gadget every year.</p>
+      <p>As a small to midsized business owner, you need to do more with less. The equipment you use to run your business needs to be flexible, adaptable, cost-efficient, and long-lasting -- you don't have the luxury of being able to buy the newest
+        gadget every year.</p>
 
-          <p class="bold">We'll show you the best way to invest in a quality phone system that will last.</p>
+      <p class="bold">We'll show you the best way to invest in a quality phone system that will last.</p>
 
-          <p>A business telephone system is a major investment. That's why it's important to rely upon an experienced telecommunications expert who understands small business to provide you with the best advice and best selection to meet your specific needs. </p>
+      <p>A business telephone system is a major investment. That's why it's important to rely upon an experienced telecommunications expert who understands small business to provide you with the best advice and best selection to meet your specific
+        needs. </p>
 
-          <p class="bold">Service to fit your schedule, not ours.</p>
+      <p class="bold">Service to fit your schedule, not ours.</p>
 
-          <p>Our service doesn't stop after installing a business telephone system. We're here 24/7 to make sure your telephone system keeps you connected to your customers. Our expert technicians are trained to solve any problem you might encounter quickly and efficiently – no run-arounds, finger-pointing, or unnecessary delays. Regardless of where the problem originates, we're here to manage it until it's fixed.</P>
+      <p>Our service doesn't stop after installing a business telephone system. We're here 24/7 to make sure your telephone system keeps you connected to your customers. Our expert technicians are trained to solve any problem you might encounter
+        quickly and efficiently – no run-arounds, finger-pointing, or unnecessary delays. Regardless of where the problem originates, we're here to manage it until it's fixed.</P>
 
-        </section>
+    </section>
 
-      </div>
+  </div>
 
-      <div class="new-page">
+  <div class="new-page">
 
-        <section id="vendor-selection">
-          <h2>Vendor Selection</h2>
-          <p>Moore Enterprises has done a basic assessment of services and requirements based on the information and billing provided by the client. Based on this assessment we have selected the following service providers and system manufacturers to be a part of this solution:</P>
-        </section>
+    <section id="vendor-selection">
+      <h2>Vendor Selection</h2>
+      <p>Moore Enterprises has done a basic assessment of services and requirements based on the information and billing provided by the client. Based on this assessment we have selected the following service providers and system manufacturers to be
+        a part of this solution:</P>
+    </section>
 
-        <section id="carrier-services">
-          <h3>Voice and Data Carrier Services</h3>
-          {% for key, value in vendors.items() %}
-          <p class="bold"> {{ key }} </p>
-          <ul>
-            {% for item in value %}
-            <li> {{ item }} </li>
-            {% endfor %}
-          </ul>
+    <section id="carrier-services">
+      <h3>Voice and Data Carrier Services</h3>
+      {% for key, value in vendors.items() %}
+      <p class="bold"> {{ key }} </p>
+      <ul>
+        {% for item in value %}
+        <li> {{ item }} </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </section>
+  </div>
+
+  <div class="new-page">
+    <section id="current-bill">
+      <h2>Current Service and Products Costs</h2>
+      <table>
+        <tr>
+          <th>Qty</th>
+          <th>Description</th>
+          <th>Rate</th>
+          <th>Total</th>
+        </tr>
+        {% for key, value in data.items() %}
+        <tr>
+          <td>{{key}}</td>
+          {% for item in value %}
+          <td> {{ item }} </td>
           {% endfor %}
-        </section>
+        </tr>
+        {% endfor %}
+        <tr>
+          <td class="bold">Total MRC</td>
+          <td></td>
+          <td></td>
+          <td class="bold"></td>
+        </tr>
+      </table>
+      <p class="disclaimer">Sales tax, carrier taxes and fees are not included in this proposal.</p>
+    </section>
+  </div>
 
+  <div class="new-page">
+    <section id="estimated-charges">
+      <h2>Proposed Services</h2>
+      <table>
+        <tr>
+          <th>Description</th>
+          <th>Qty</th>
+          <th>Rate</th>
+          <th>Total</th>
+        </tr>
+        {% for key, value in data.items() %}
+        <tr>
+          <td>{{key}}</td>
+          {% for item in value %}
+          <td> {{ item }} </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+        <tr>
+          <td class="bold">Estimate Total</td>
+          <td></td>
+          <td></td>
+          <td class="bold">{{total}}</td>
+        </tr>
+      </table>
+      <p class="disclaimer">Sales tax, carrier taxes and fees are not included in this proposal.</p>
+    </section>
+  </div>
+
+  <div class="new-page">
+
+    <section id="support">
+      <p class="bold">$50 per location + $1.00 per phone</p>
+      <ul>
+        <li>Software updates and patches</li>
+        <li>Maintain and update documentation</li>
+        <li>10% hardware discount</li>
+        <li>15% training discount</li>
+        <li>24/7 monitoring of licensing, warranties, key events, and up/down status</li>
+        <li>Free consultations for moves and growth</li>
+        <li>Off-site monthly backup to our data center</li>
+        <li>Network monitoring</li>
+        <li>Bandwidth utilization assessment</li>
+        <li>Annual communications review</li>
+        <li>Advocacy and assistance with carrier issues</li>
+        <li>Best practice consultation</li>
+        <li>Integration consultation</li>
+
+      </ul>
+      <p class="bold">Remote labor at 15-minute increments (disount of $30/hour)</p>
+      <p class="bold">Onsite support and training available at reduced rate</p>
+    </section>
+
+  </div>
+
+  <div class="new-page">
+
+    <section id="signature">
+      <h2>Moving Forward with Your Approval</h2>
+      <p class="bold">By signing below you are agreeing to this plan and payment structure. As the project moves forward third party contracts will be provided as defined by those vendors.</p>
+
+      <p>Depending on the scope and involvement of so many vendors, the actual time to complete the project may be somewhat less or somewhat more than the inital estimate. During the project if there are any issues that cause significant variance in
+        the above estimate, we will notify you as soon as possible. Adding additional tasks will likely change the cost in hardware, software licenses and labor. By signing this section, you agree to accept this proposal and the provisions of this
+        document. Payment or lease agreement will be provided upon acceptance of this agreement.</p>
+
+      <div>
+        <input type="text" id="auth" class="signature">
+        <label for="auth">Authorized Signature</label><br>
+
+        <input type="text" id="print" class="signature">
+        <label for="print">Printed Name</label><br>
+
+        <input type="text" id="company" class="signature">
+        <label for="company">Company Name</label><br>
       </div>
+    </section>
+  </div>
 
-      <div class="new-page">
+  <footer>
+    <p class="bottom-left">Moore Enterprises</p>
 
-        <section id="estimated-charges">
-          <h2>Proposed Services</h2>
-          <table>
-            <tr>
-              <th>Description</th>
-              <th>Qty</th>
-              <th>Rate</th>
-              <th>Total</th>
-            </tr>
-            {% for key, value in data.items() %}
-              <tr>
-                <td>{{key}}</td>
-                {% for item in value %}
-                  <td> {{ item }} </td>
-                {% endfor %}
-              </tr>
-            {% endfor %}
-            <tr>
-              <td class="bold">Estimate Total</td>
-              <td></td>
-              <td></td>
-              <td class="bold">{{total}}</td>
-            </tr>
-          </table>
-
-          <p class="disclaimer">Sales tax, carrier taxes and fees are not included in this proposal.</p>
-        </section>
-
-      </div>
-
-      <div class="new-page">
-
-        <section id="support">
-          <p class="bold">$50 per location + $1.00 per phone</p>
-          <ul>
-            <li>Software updates and patches</li>
-            <li>Maintain and update documentation</li>
-            <li>10% hardware discount</li>
-            <li>15% training discount</li>
-            <li>24/7 monitoring of licensing, warranties, key events, and up/down status</li>
-            <li>Free consultations for moves and growth</li>
-            <li>Off-site monthly backup to our data center</li>
-            <li>Network monitoring</li>
-            <li>Bandwidth utilization assessment</li>
-            <li>Annual communications review</li>
-            <li>Advocacy and assistance with carrier issues</li>
-            <li>Best practice consultation</li>
-            <li>Integration consultation</li>
-
-          </ul>
-          <p class="bold">Remote labor at 15-minute increments (disount of $30/hour)</p>
-          <p class="bold">Onsite support and training available at reduced rate</p>
-        </section>
-
-      </div>
-
-      <div class="new-page">
-
-        <section id="signature">
-          <h2>Moving Forward with Your Approval</h2>
-          <p class="bold">By signing below you are agreeing to this plan and payment structure. As the project moves forward third party contracts will be provided as defined by those vendors.</p>
-
-          <p>Depending on the scope and involvement of so many vendors, the actual time to complete the project may be somewhat less or somewhat more than the inital estimate. During the project if there are any issues that cause significant variance in the above estimate, we will notify you as soon as possible. Adding additional tasks will likely change the cost in hardware, software licenses and labor. By signing this section, you agree to accept this proposal and the provisions of this document. Payment or lease agreement will be provided upon acceptance of this agreement.</p>
-
-          <div>
-            <input type="text" id="auth" class="signature">
-            <label for="auth">Authorized Signature</label><br>
-
-            <input type="text" id="print" class="signature">
-            <label for="print">Printed Name</label><br>
-
-            <input type="text" id="company" class="signature">
-            <label for="company">Company Name</label><br>
-          </div>
-        </section>
-      </div>
-
-        <footer>
-            <p class="bottom-left">Moore Enterprises</p>
-
-            <p class="bottom-right">209 Fitchburg Road<br>Townsend MA 01469<br>(978)597-0204</p>
-        </footer>
+    <p class="bottom-right">209 Fitchburg Road<br>Townsend MA 01469<br>(978)597-0204</p>
+  </footer>
 
 
 
 
-    </body>
+</body>
+
 </html>

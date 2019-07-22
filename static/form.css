@@ -1,87 +1,90 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/*
-    Created on : Jun 27, 2019, 9:32:21 AM
-    Author     : shaunakimura
-*/
+/* css by Shauna Kimura */
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
-body{
-    background-color: #0074D9;
-    font-family: "Helvetica Neue";
-    margin: auto;
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-form{
-    background: white;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    color: #33363b;
-    font-size: 12pt;
-    margin: auto;
-    margin-bottom: 4em;
-    margin-top: 4em;
-    padding: 1em;
-    width: 70%;
+form {
+  border-radius: 10px;
+  background-color: #f2f2f2;
+  box-shadow: 0 8px 6px -6px #777;
+  margin: auto;
+  margin-bottom: 10%;
+  padding: 20px;
+  width: 80%;
 }
 
-fieldset{
-    border: none;
-    margin-bottom: 1em;
+fieldset {
+  border: none;
+  margin-bottom: 1em;
 }
 
-legend{
-    font-weight: bold;
+label {
+  color: #3b3a30;
+  padding: 12px 12px 12px 0;
+  display: inline-block;
 }
 
-input[type='text']{
-    font-size: 10pt;
-    margin-top: .5em;
-    width: 100%;
+label+.add {
+  margin-bottom: 1em;
 }
 
-input[type='checkbox']{
-    margin-bottom: .5em;
+input[type=text], input[type=url], input[type=number], select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 10pt;
+  padding: 12px;
+  width: 100%;
 }
 
-button{
-    background: white;
-    border: 2px solid #0074D9;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    color: #0074D9;
-    font-size: 12pt;
-    padding: .5em;
-    text-align: center;
-    width: 60%;
+input[type=submit], input[type=button] {
+  background-color: #77a8a8;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 10pt;
 }
 
-button:hover{
-    background-color: #0074D9;
-    color: white;
-    cursor: grab;
+input[type=submit] {
+  float: right;
+  padding: 12px 20px;
 }
 
-footer{
-    background-color: white;
-    color: #33363b;
-    margin-top: 2em;
-    padding: 1em;
-    text-align: center;
-    width: 100%;
+table {
+  border-collapse: collapse;
+  overflow-x: auto;
+  table-layout: auto;
+  width: 100%;
 }
 
-/* custom */
-
-#title{
-    color: #33363b;
-    text-align: center;
+table th, td {
+  color: #3b3a30;
+  font-weight: normal;
+  text-align: left;
 }
 
-.textLabel{
-    font-weight: bold;
+table input {
+  padding: 8px;
 }
 
-fieldset.submit{
-    text-align: center;
+footer {
+  background: #b9b0b0;
+  bottom: 0;
+  color: #fff;
+  left: 0;
+  padding: .5em;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+
+.add {
+  padding: 4px 8px;
+}
+
+.delete {
+  padding: 12px;
 }
